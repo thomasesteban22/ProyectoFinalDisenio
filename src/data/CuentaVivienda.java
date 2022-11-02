@@ -6,9 +6,19 @@ public class CuentaVivienda extends Cuenta {
     private long precioVivienda;
     private boolean vis;
 
-    public CuentaVivienda(int numeroDeCuenta, LocalDate fechaDeApertura, Persona datosPersona, long dato, long precioVivienda, boolean vis) {
-        super(numeroDeCuenta, fechaDeApertura, datosPersona, dato);
+    public long getPrecioVivienda() {
+        return precioVivienda;
+    }
+
+    public void setPrecioVivienda(long precioVivienda) {
         this.precioVivienda = precioVivienda;
+    }
+
+    public boolean isVis() {
+        return vis;
+    }
+
+    public void setVis(boolean vis) {
         this.vis = vis;
     }
 }

@@ -7,10 +7,27 @@ public class CuentaCorriente extends Cuenta{
     private long valorUltimoMovimiento;
     private long valorTopeSobreGiro;
 
-    public CuentaCorriente(int numeroDeCuenta, LocalDate fechaDeApertura, Persona datosPersona, long dato, LocalDate fechaDelUltimoMovimento, long valorUltimoMovimiento, long valorTopeSobreGiro) {
-        super(numeroDeCuenta, fechaDeApertura, datosPersona, dato);
+    public LocalDate getFechaDelUltimoMovimento() {
+        return fechaDelUltimoMovimento;
+    }
+
+    public void setFechaDelUltimoMovimento(LocalDate fechaDelUltimoMovimento) {
         this.fechaDelUltimoMovimento = fechaDelUltimoMovimento;
+    }
+
+    public long getValorUltimoMovimiento() {
+        return valorUltimoMovimiento;
+    }
+
+    public void setValorUltimoMovimiento(long valorUltimoMovimiento) {
         this.valorUltimoMovimiento = valorUltimoMovimiento;
+    }
+
+    public long getValorTopeSobreGiro() {
+        return valorTopeSobreGiro;
+    }
+
+    public void setValorTopeSobreGiro(long valorTopeSobreGiro) {
         this.valorTopeSobreGiro = valorTopeSobreGiro;
     }
 }
