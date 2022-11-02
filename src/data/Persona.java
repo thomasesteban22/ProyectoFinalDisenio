@@ -1,9 +1,19 @@
 package data;
 
 public class Persona {
+
+    private int id;
     private String nombre;
     private String apellido;
     private String correo;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;
