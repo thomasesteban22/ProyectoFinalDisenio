@@ -8,7 +8,7 @@ public class Cuenta {
     protected Persona datosPersona;
     protected long saldo;
 
-    public Cuenta(int numeroDeCuenta, LocalDate fechaDeApertura, Persona datosPersona, long dato) {
+    public Cuenta(int numeroDeCuenta, LocalDate fechaDeApertura, Persona datosPersona, long saldo) {
         this.numeroDeCuenta = numeroDeCuenta;
         this.fechaDeApertura = fechaDeApertura;
         this.datosPersona = datosPersona;
