@@ -1,8 +1,9 @@
 package data;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Cuenta {
+public class Cuenta implements Serializable {
     protected int numeroDeCuenta;
     protected LocalDate fechaDeApertura;
     protected Persona datosPersona;
