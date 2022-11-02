@@ -3,8 +3,15 @@ package data;
 import java.time.LocalDate;
 
 public class Cuenta {
-    private int numeroDeCuenta;
-    private LocalDate fechaDeApertura;
-    private Persona datosPersona;
-    private long dato;
+    protected int numeroDeCuenta;
+    protected LocalDate fechaDeApertura;
+    protected Persona datosPersona;
+    protected long dato;
+
+    public Cuenta(int numeroDeCuenta, LocalDate fechaDeApertura, Persona datosPersona, long dato) {
+        this.numeroDeCuenta = numeroDeCuenta;
+        this.fechaDeApertura = fechaDeApertura;
+        this.datosPersona = datosPersona;
+        this.dato = dato;
+    }
 }
