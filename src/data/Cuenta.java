@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 public class Cuenta implements Serializable {
     protected int numeroDeCuenta;
+    protected char tipo;
     protected LocalDate fechaDeApertura;
     protected Persona datosPersona;
     protected long saldo;

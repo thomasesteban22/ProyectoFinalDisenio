@@ -14,10 +14,11 @@ public class PersonasDAO {
     }
 
     public boolean adicionar(Persona persona) {
+
         return listaPersona.add(persona);
     }
 
-    public Object buscar(int id) {
+    public Persona buscar(int id) {
         for (Persona persona : listaPersona) {
             if (persona.getId() == id) {
                 return persona;
@@ -26,8 +27,6 @@ public class PersonasDAO {
                 return null;
             }
         }
-        return null;
     }
-
 
 }
