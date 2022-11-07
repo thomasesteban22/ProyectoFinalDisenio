@@ -1,6 +1,6 @@
 package data;
 
-public class Persona {
+public class Persona implements Serializable{
 
     private int id;
     private String nombre;
