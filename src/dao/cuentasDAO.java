@@ -6,7 +6,7 @@ import java.util.List;
 
 public class cuentasDAO {
     private List<Cuenta> listaCuentas;
-    public CuentasDAO(){ listaCuentas = new ArrayList<>();}
+    public void CuentasDAO(){ listaCuentas = new ArrayList<>();}
 
     public boolean adicionar (Cuenta cuenta) {
         return listaCuentas.add(cuenta);}
