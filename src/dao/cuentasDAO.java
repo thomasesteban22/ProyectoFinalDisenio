@@ -11,15 +11,14 @@ public class cuentasDAO {
     public boolean adicionar (Cuenta cuenta) {
         return listaCuentas.add(cuenta);}
 
-    public Cuenta buscar(int numeroDeCuenta){
+    public Cuenta buscar(int numeroDeCuenta) {
         for (Cuenta cuenta : listaCuentas) {
-            if (cuenta.getNumeroDeCuenta()== numeroDeCuenta) {
+            if (cuenta.getNumeroDeCuenta() == numeroDeCuenta) {
                 return cuenta;
-            }
-            else {
+            } else {
                 return null;
             }
         }
+        return null;
     }
-
 }
