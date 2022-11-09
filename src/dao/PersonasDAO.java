@@ -9,7 +9,7 @@ import java.util.List;
 public class PersonasDAO {
     private List<Persona> listaPersona;
 
-    public PersonasDAO() {
+    public void PersonasDAO() {
         listaPersona = new ArrayList<>();
     }
 
@@ -22,11 +22,10 @@ public class PersonasDAO {
         for (Persona persona : listaPersona) {
             if (persona.getId() == id) {
                 return persona;
-            }
-            else {
+            } else {
                 return null;
             }
         }
+        return null;
     }
-
 }

@@ -6,10 +6,13 @@ import java.util.List;
 
 public class cuentasDAO {
     private List<Cuenta> listaCuentas;
-    public void CuentasDAO(){ listaCuentas = new ArrayList<>();}
+    public void CuentasDAO(){
+        listaCuentas = new ArrayList<>();
+    }
 
     public boolean adicionar (Cuenta cuenta) {
-        return listaCuentas.add(cuenta);}
+        return listaCuentas.add(cuenta);
+    }
 
     public Cuenta buscar(int numeroDeCuenta) {
         for (Cuenta cuenta : listaCuentas) {
