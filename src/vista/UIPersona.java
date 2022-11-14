@@ -4,4 +4,5 @@ import javax.swing.*;
 
 public class UIPersona {
     public JButton adicionar;
+    public JButton buscar;
 }

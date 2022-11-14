@@ -13,6 +13,7 @@ public class ControladorPersona implements ActionListener {
         this.vista = vista;
         this.modelo = new PersonasDAO();
         this.vista.adicionar.addActionListener(this);
+        this.vista.buscar.addActionListener(this);
 
     }
 
