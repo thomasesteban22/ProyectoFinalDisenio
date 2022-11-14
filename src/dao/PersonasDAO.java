@@ -3,21 +3,26 @@ package dao;
 import data.Persona;
 
 
-import java.io.ObjectInput;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PersonasDAO {
     private List<Persona> listaPersona;
-
     private ObjectInputStream entrada;
     private ObjectOutputStream salida;
     private String filePath = "persona.dat";
+
     public void PersonasDAO(){
         listaPersona = new ArrayList<>();
+        File file = new File(filePath);
+        /*if(file.isFile()){
+            try{
+                this.entrada = new ObjectInputStream();
+            } catch (Exception e) {
+                guardar();
+            }
+        }*/
     }
     public boolean adicionar(Persona persona) {
         return listaPersona.add(persona);
