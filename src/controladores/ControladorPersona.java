@@ -1,5 +1,6 @@
 package controladores;
 import dao.PersonasDAO;
+import data.Persona;
 import vista.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,7 +20,10 @@ public class ControladorPersona implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if(e.getSource().equals(vista.adicionar)){
+            Persona persona = new Persona();
+            int id = Integer.valueOf(vista.id);
+        }
     }
 }
 
