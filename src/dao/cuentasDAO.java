@@ -18,8 +18,6 @@ public class cuentasDAO {
         for (Cuenta cuenta : listaCuentas) {
             if (cuenta.getNumeroDeCuenta() == numeroDeCuenta) {
                 return cuenta;
-            } else {
-                return null;
             }
         }
         return null;
