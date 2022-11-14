@@ -130,20 +130,28 @@
         </constraints>
         <properties/>
       </component>
-      <component id="a7b1a" class="javax.swing.JButton" binding="buscar">
-        <constraints>
-          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Buscar"/>
-        </properties>
-      </component>
       <component id="b81d8" class="javax.swing.JLabel">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Creador de Cuentas"/>
+        </properties>
+      </component>
+      <component id="a7b1a" class="javax.swing.JButton" binding="buscarUsuario">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Buscar Usuario"/>
+        </properties>
+      </component>
+      <component id="77fe3" class="javax.swing.JButton" binding="buscarCuenta">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Buscar Cuenta"/>
         </properties>
       </component>
     </children>

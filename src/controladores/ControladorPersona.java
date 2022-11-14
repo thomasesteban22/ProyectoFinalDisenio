@@ -19,9 +19,6 @@ public class ControladorPersona implements ActionListener {
         this.vista.buscar.addActionListener(this);
         modelo.PersonasDAO();
     }
-
-
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(vista.adicionar)){

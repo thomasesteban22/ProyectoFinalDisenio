@@ -13,5 +13,8 @@ public class UICuentas {
     public JTextField nombre;
     public JTextField apellido;
     public JTextField correo;
-    public JButton buscar;
+    public JButton buscarUsuario;
+    public JButton buscarCuenta;
+
+
 }
