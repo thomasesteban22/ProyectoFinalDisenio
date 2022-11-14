@@ -3,5 +3,5 @@ package vista;
 import javax.swing.*;
 
 public class UIPersona {
-    private JButton button1;
+    public JButton adicionar;
 }

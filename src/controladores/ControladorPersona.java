@@ -1,8 +1,10 @@
 package controladores;
 import dao.PersonasDAO;
 import vista.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ControladorPersona {
+public class ControladorPersona implements ActionListener {
     private UIPersona vista;
     private PersonasDAO modelo;
 
@@ -10,8 +12,13 @@ public class ControladorPersona {
     public ControladorPersona(UIPersona vista){
         this.vista = vista;
         this.modelo = new PersonasDAO();
+        this.vista.adicionar.addActionListener(this);
 
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
 }
 
