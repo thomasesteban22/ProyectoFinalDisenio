@@ -25,7 +25,7 @@ public class Persona implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getApellido(String apellido) {
+    public String getApellido() {
         return this.apellido;
     }
 
@@ -33,11 +33,21 @@ public class Persona implements Serializable {
         this.apellido = apellido;
     }
 
-    public String getCorreo(String correo) {
+    public String getCorreo() {
         return this.correo;
     }
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", correo='" + correo + '\'' +
+                '}';
     }
 }

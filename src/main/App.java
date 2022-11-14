@@ -1,5 +1,6 @@
 package main;
 import controladores.ControladorPersona;
+import dao.PersonasDAO;
 import vista.UIPersona;
 
 

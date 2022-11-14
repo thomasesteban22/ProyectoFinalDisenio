@@ -12,15 +12,14 @@ import java.util.List;
 
 public class PersonasDAO {
     private List<Persona> listaPersona;
-    //private ObjectInputStream entrada;
-    //private ObjectOutputStream salida;
-    //private String filePath = "person.dat";
-    public void PersonasDAO() {
+
+    private ObjectInputStream entrada;
+    private ObjectOutputStream salida;
+    private String filePath = "persona.dat";
+    public void PersonasDAO(){
         listaPersona = new ArrayList<>();
     }
-
     public boolean adicionar(Persona persona) {
-
         return listaPersona.add(persona);
     }
 
@@ -28,10 +27,12 @@ public class PersonasDAO {
         for (Persona persona : listaPersona) {
             if (persona.getId() == id) {
                 return persona;
-            } else {
-                return null;
             }
         }
         return null;
+    }
+
+    public List<Persona> getListaPersona() {
+        return listaPersona;
     }
 }
