@@ -22,7 +22,15 @@ public class ControladorPersona implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(vista.adicionar)){
             Persona persona = new Persona();
-            int id = Integer.valueOf(vista.id);
+            int id = Integer.valueOf(vista.id.getText());
+            String nombre = vista.nombre.getText();
+            String apellido = vista.apellido.getText();
+            String correo = vista.correo.getText();
+            persona.setId(id);
+            persona.setNombre(nombre);
+            persona.getApellido(apellido);
+            persona.getCorreo(correo);
+
         }
     }
 }

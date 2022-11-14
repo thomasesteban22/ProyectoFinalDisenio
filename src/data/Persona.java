@@ -1,6 +1,8 @@
 package data;
 
-public class Persona implements Serializable{
+import java.io.Serializable;
+
+public class Persona implements Serializable {
 
     private int id;
     private String nombre;
@@ -23,16 +25,16 @@ public class Persona implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getApellido(String apellido) {
+        return this.apellido;
     }
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getCorreo(String correo) {
+        return this.correo;
     }
 
     public void setCorreo(String correo) {
