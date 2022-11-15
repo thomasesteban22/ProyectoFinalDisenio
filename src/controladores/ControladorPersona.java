@@ -4,6 +4,7 @@ import data.Persona;
 import vista.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class ControladorPersona implements ActionListener {
     private UIPersona vista;
@@ -12,12 +13,12 @@ public class ControladorPersona implements ActionListener {
 
 
 
-    public ControladorPersona(UIPersona vista){
+    public ControladorPersona(UIPersona vista) throws IOException {
         this.vista = vista;
         this.modelo = new PersonasDAO();
         this.vista.adicionar.addActionListener(this);
         this.vista.buscar.addActionListener(this);
-        modelo.PersonasDAO();
+
     }
 
 
