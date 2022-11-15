@@ -4,7 +4,7 @@ import data.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class cuentasDAO {
+public class CuentasDAO {
     private List<Cuenta> listaCuentas;
     public void CuentasDAO(){
         listaCuentas = new ArrayList<>();
@@ -14,12 +14,10 @@ public class cuentasDAO {
         return listaCuentas.add(cuenta);
     }
 
-    public Cuenta buscar(int numeroDeCuenta) {
+    public Cuenta buscar(String numeroDeCuenta) {
         for (Cuenta cuenta : listaCuentas) {
             if (cuenta.getNumeroDeCuenta() == numeroDeCuenta) {
                 return cuenta;
-            } else {
-                return null;
             }
         }
         return null;

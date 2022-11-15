@@ -4,13 +4,13 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Cuenta implements Serializable {
-    protected int numeroDeCuenta;
-    protected char tipo;
+    protected String numeroDeCuenta;
+
     protected LocalDate fechaDeApertura;
     protected Persona datosPersona;
     protected long saldo;
 
-    public int getNumeroDeCuenta() {
+    public String getNumeroDeCuenta() {
         return numeroDeCuenta;
     }
 
@@ -26,7 +26,7 @@ public class Cuenta implements Serializable {
         return saldo;
     }
 
-    public void setNumeroDeCuenta(int numeroDeCuenta) {
+    public void setNumeroDeCuenta(String numeroDeCuenta) {
         this.numeroDeCuenta = numeroDeCuenta;
     }
 
