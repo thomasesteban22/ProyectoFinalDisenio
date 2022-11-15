@@ -8,6 +8,7 @@ import vista.UICuentas;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class ControladorCuentas implements ActionListener{
@@ -15,7 +16,7 @@ public class ControladorCuentas implements ActionListener{
     private CuentasDAO modelo;
     private PersonasDAO modelo2;
 
-    public ControladorCuentas(UICuentas vista){
+    public ControladorCuentas(UICuentas vista) throws IOException {
         this.vista = vista;
         this.modelo = new CuentasDAO();
         this.modelo2 =new PersonasDAO();
