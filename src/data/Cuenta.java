@@ -55,4 +55,15 @@ public class Cuenta implements Serializable {
         this.saldo = saldo;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "Cuenta{" +
+                "tipo=" + tipo +
+                ", numeroDeCuenta=" + numeroDeCuenta +
+                ", fechaDeApertura=" + fechaDeApertura +
+                ", datosPersona=" + datosPersona +
+                ", saldo=" + saldo +
+                '}';
+    }
 }

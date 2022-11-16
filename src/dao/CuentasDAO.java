@@ -12,6 +12,42 @@ public class CuentasDAO {
     private String filePath = "persona.dat";
     private List<Cuenta> listaCuentas;
 
+    public ObjectInputStream getEntrada() {
+        return entrada;
+    }
+
+    public CuentasDAO setEntrada(ObjectInputStream entrada) {
+        this.entrada = entrada;
+        return this;
+    }
+
+    public ObjectOutputStream getSalida() {
+        return salida;
+    }
+
+    public CuentasDAO setSalida(ObjectOutputStream salida) {
+        this.salida = salida;
+        return this;
+    }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public CuentasDAO setFilePath(String filePath) {
+        this.filePath = filePath;
+        return this;
+    }
+
+    public List<Cuenta> getListaCuentas() {
+        return listaCuentas;
+    }
+
+    public CuentasDAO setListaCuentas(List<Cuenta> listaCuentas) {
+        this.listaCuentas = listaCuentas;
+        return this;
+    }
+
     public void CuentasDAO() throws IOException {
         listaCuentas = new ArrayList<>();
         File file = new File(filePath);
@@ -36,14 +72,8 @@ public class CuentasDAO {
         }
     }
     public int crearId() {
-        for (Cuenta cuenta : listaCuentas) {
-            int idRand = (int) (Math.random() * (999 - 99) + 99);
-            System.out.println("en el for");
-            while (cuenta.getNumeroDeCuenta() != idRand) {
-                System.out.println(idRand);
-                return idRand;
-            }
-        }return 0;
+        int idRand = (int) (Math.random() * (999 - 99) + 99);
+        return idRand;
     }
 
 

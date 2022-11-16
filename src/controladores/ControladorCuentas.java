@@ -17,6 +17,7 @@ public class ControladorCuentas implements ActionListener{
     private CuentasDAO modelo;
     private PersonasDAO modelo2;
 
+
     public ControladorCuentas(UICuentas vista) throws IOException {
         this.vista = vista;
         this.modelo = new CuentasDAO();
@@ -30,8 +31,9 @@ public class ControladorCuentas implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(vista.adicionarCuentaAhorros)){
-            LocalDate fechaDeApertura = LocalDate.now();
             int idRand = modelo.crearId();
+            LocalDate fechaDeApertura = LocalDate.now();
+            System.out.println(idRand);
             CuentaAhorros cuentaAhorros = new CuentaAhorros();
             int id = Integer.valueOf(vista.id.getText());
 
@@ -41,9 +43,11 @@ public class ControladorCuentas implements ActionListener{
             cuentaAhorros.setDatosPersona(modelo2.buscar(id));
             cuentaAhorros.setSaldo(0);
             cuentaAhorros.setInteresAcomulado(30);
+            modelo.adicionar(cuentaAhorros);
 
-            vista.numeroDeCuenta.setText(String.valueOf(idRand));
+            vista.numeroDeCuenta.setText(String.valueOf(modelo.crearId()));
             vista.fechaDeApertura.setText(String.valueOf(fechaDeApertura));
+            System.out.println(modelo.getListaCuentas());
 
         }
         if(e.getSource().equals(vista.adicionarCuentaCorriente)){
