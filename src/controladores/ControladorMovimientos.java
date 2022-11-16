@@ -27,10 +27,12 @@ public class ControladorMovimientos implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(vista.buscar)){
-
+            int numeroDeCuenta = Integer.valueOf(vista.numeroDeCuenta.getText());
+            vista.id.setText(String.valueOf(modelo.buscar(numeroDeCuenta).getDatosPersona().getId()));
+            vista.saldo.setText(String.valueOf(modelo.buscar(numeroDeCuenta).getSaldo()));
         }
         if(e.getSource().equals(vista.depositar)){
-            CuentaCorriente cuentaCorriente =new CuentaCorriente();
+            
         }
         if(e.getSource().equals(vista.retirar)) {
         }
