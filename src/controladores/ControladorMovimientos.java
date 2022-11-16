@@ -32,7 +32,7 @@ public class ControladorMovimientos implements ActionListener {
             vista.saldo.setText(String.valueOf(modelo.buscar(numeroDeCuenta).getSaldo()));
         }
         if(e.getSource().equals(vista.depositar)){
-            
+            int cantidad = Integer.valueOf(vista.cantidad.getText());
         }
         if(e.getSource().equals(vista.retirar)) {
         }
