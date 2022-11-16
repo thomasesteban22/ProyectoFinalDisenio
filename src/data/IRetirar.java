@@ -1,5 +1,5 @@
 package data;
 
 public interface IRetirar {
-    public void retirar(int valorRetiro);
+    public int retirar(int valorRetiro);
 }

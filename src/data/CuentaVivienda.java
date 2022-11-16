@@ -1,8 +1,6 @@
 package data;
 
-import java.time.LocalDate;
-
-public class CuentaVivienda extends Cuenta {
+public class CuentaVivienda extends Cuenta implements IDepositar{
     private long precioVivienda;
     private boolean vis;
 
@@ -20,5 +18,11 @@ public class CuentaVivienda extends Cuenta {
 
     public void setVis(boolean vis) {
         this.vis = vis;
+    }
+
+    @Override
+    public int depositar(long valorDeposito) {
+        saldo = saldo + valorDeposito;
+        return (int) saldo;
     }
 }

@@ -1,6 +1,6 @@
 package data;
 
-public class CuentaAhorros extends Cuenta{
+public class CuentaAhorros extends Cuenta implements IRetirar, IDepositar{
     private long interesAcomulado;
 
 
@@ -23,5 +23,22 @@ public class CuentaAhorros extends Cuenta{
                 ", datosPersona=" + datosPersona +
                 ", saldo=" + saldo +
                 '}';
+    }
+
+    @Override
+    public int depositar(long valorDeposito) {
+        saldo = saldo + valorDeposito;
+        return (int) saldo;
+    }
+
+    @Override
+    public int retirar(int valorRetiro) {
+        if (saldo > valorRetiro) {
+            saldo = saldo - valorRetiro;
+            return (int) saldo;
+        }else {
+            System.out.println("Saldo insuficiente");
+        }
+    return 0;
     }
 }

@@ -1,7 +1,7 @@
 package data;
 
 public interface IDepositar {
-    public void depositar(long valorDeposito);
+    public int depositar(long valorDeposito);
 
 
 }
