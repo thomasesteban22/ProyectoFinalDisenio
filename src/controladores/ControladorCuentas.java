@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class ControladorCuentas implements ActionListener{
     private UICuentas vista;
@@ -29,15 +30,20 @@ public class ControladorCuentas implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(vista.adicionarCuentaAhorros)){
+            LocalDate fechaDeApertura = LocalDate.now();
+            int idRand = modelo.crearId();
             CuentaAhorros cuentaAhorros = new CuentaAhorros();
-            String numeroDeCuenta = vista.numeroDeCuenta.getText();
-            LocalDate fechaDeApertura = LocalDate.parse(vista.fechaDeApertura.getText());
             int id = Integer.valueOf(vista.id.getText());
-            String nombre = vista.nombre.getText();
-            String apellido = vista.apellido.getText();
-            String correo = vista.correo.getText();
-            cuentaAhorros.setNumeroDeCuenta(numeroDeCuenta);
+
+            cuentaAhorros.setNumeroDeCuenta(idRand);
             cuentaAhorros.setFechaDeApertura(fechaDeApertura);
+            cuentaAhorros.setTipo('A');
+            cuentaAhorros.setDatosPersona(modelo2.buscar(id));
+            cuentaAhorros.setSaldo(0);
+            cuentaAhorros.setInteresAcomulado(30);
+
+            vista.numeroDeCuenta.setText(String.valueOf(idRand));
+            vista.fechaDeApertura.setText(String.valueOf(fechaDeApertura));
 
         }
         if(e.getSource().equals(vista.adicionarCuentaCorriente)){
@@ -47,8 +53,8 @@ public class ControladorCuentas implements ActionListener{
             CuentaVivienda cuentaVivienda =new CuentaVivienda();
         }
         if(e.getSource().equals(vista.buscarCuenta)){
-            String numeroDeCuenta = vista.numeroDeCuenta.getText();
-            vista.numeroDeCuenta.setText(modelo.buscar(numeroDeCuenta).getNumeroDeCuenta());
+            int numeroDeCuenta = Integer.parseInt(vista.numeroDeCuenta.getText());
+            vista.numeroDeCuenta.setText(String.valueOf(modelo.buscar(numeroDeCuenta).getNumeroDeCuenta()));
             vista.fechaDeApertura.setText(String.valueOf(modelo.buscar(numeroDeCuenta).getFechaDeApertura()));
             vista.id.setText(String.valueOf(modelo.buscar(numeroDeCuenta).getDatosPersona().getId()));
             vista.nombre.setText(modelo.buscar(numeroDeCuenta).getDatosPersona().getNombre());
