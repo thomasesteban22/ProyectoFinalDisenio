@@ -77,8 +77,9 @@ public class CuentasDAO {
     }
 
 
-    public boolean adicionar(Cuenta cuenta) {
-        return listaCuentas.add(cuenta);
+    public void adicionar(Cuenta cuenta) {
+        listaCuentas.add(cuenta);
+        guardar();
     }
 
     public Cuenta buscar(int numeroDeCuenta) {
