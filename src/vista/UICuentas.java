@@ -19,7 +19,7 @@ public class UICuentas extends JFrame{
     public UICuentas(){
         setContentPane(vistaCuenta);
         setTitle("Vista persona");
-        setSize(450, 450);
+        setSize(550, 450);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
     }
