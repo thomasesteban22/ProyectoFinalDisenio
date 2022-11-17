@@ -36,7 +36,7 @@ public class CuentaAhorros extends Cuenta implements IRetirar, IDepositar{
         if (saldo > valorRetiro) {
             saldo = saldo - valorRetiro;
             return (int) saldo;
-        }else {
+        }else if(saldo < valorRetiro){
             System.out.println("Saldo insuficiente");
         }
     return 0;

@@ -34,6 +34,7 @@ public class CuentaCorriente extends Cuenta implements IDepositar, IRetirar{
     @Override
     public int depositar(long valorDeposito) {
         saldo = saldo + valorDeposito;
+        System.out.println(saldo);
         return (int) saldo;
     }
 
@@ -42,7 +43,7 @@ public class CuentaCorriente extends Cuenta implements IDepositar, IRetirar{
         if (saldo > valorRetiro) {
             saldo = saldo - valorRetiro;
             return (int) saldo;
-        }else {
+        }else if(saldo < valorRetiro){
             System.out.println("Saldo insuficiente");
         }
         return 0;

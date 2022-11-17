@@ -26,6 +26,7 @@ public class ControladorCuentas implements ActionListener{
         this.vista.adicionarCuentaCorriente.addActionListener(this);
         this.vista.adicionarCuentaVivienda.addActionListener(this);
         this.vista.buscarUsuario.addActionListener(this);
+        this.vista.buscarCuenta.addActionListener(this);
         modelo.CuentasDAO();
     }
     @Override
@@ -49,9 +50,15 @@ public class ControladorCuentas implements ActionListener{
             cuentaAhorros.setInteresAcomulado(30);
             modelo.adicionar(cuentaAhorros);
 
-            vista.numeroDeCuenta.setText(String.valueOf(modelo.crearId()));
+            vista.numeroDeCuenta.setText(String.valueOf(idRand));
             vista.fechaDeApertura.setText(String.valueOf(fechaDeApertura));
-            System.out.println(modelo.getListaCuentas());
+
+            vista.numeroDeCuenta.setText("");
+            vista.fechaDeApertura.setText("");
+            vista.id.setText("");
+            vista.nombre.setText("");
+            vista.apellido.setText("");
+            vista.correo.setText("");
 
         }
 
@@ -75,8 +82,17 @@ public class ControladorCuentas implements ActionListener{
             cuentaCorriente.setValorTopeSobreGiro(50000000);
             modelo.adicionar(cuentaCorriente);
 
-            vista.numeroDeCuenta.setText(String.valueOf(modelo.crearId()));
+            vista.numeroDeCuenta.setText(String.valueOf(idRand));
             vista.fechaDeApertura.setText(String.valueOf(fechaHoy));
+
+            vista.numeroDeCuenta.setText("");
+            vista.fechaDeApertura.setText("");
+            vista.id.setText("");
+            vista.nombre.setText("");
+            vista.apellido.setText("");
+            vista.correo.setText("");
+
+
         }
 
         /* ADICIONAR CUENTA VIVIENDA*/
@@ -98,18 +114,26 @@ public class ControladorCuentas implements ActionListener{
             cuentaVivienda.setVis(true);
             modelo.adicionar(cuentaVivienda);
 
-            vista.numeroDeCuenta.setText(String.valueOf(modelo.crearId()));
+            vista.numeroDeCuenta.setText(String.valueOf(idRand));
             vista.fechaDeApertura.setText(String.valueOf(fechaHoy));
 
+            vista.numeroDeCuenta.setText("");
+            vista.fechaDeApertura.setText("");
+            vista.id.setText("");
+            vista.nombre.setText("");
+            vista.apellido.setText("");
+            vista.correo.setText("");
+
         }
+        //BUSCAR CUENTA
+
         if(e.getSource().equals(vista.buscarCuenta)){
-            int numeroDeCuenta = Integer.parseInt(vista.numeroDeCuenta.getText());
-            vista.numeroDeCuenta.setText(String.valueOf(modelo.buscar(numeroDeCuenta).getNumeroDeCuenta()));
+            int numeroDeCuenta = Integer.valueOf(vista.numeroDeCuenta.getText());
             vista.fechaDeApertura.setText(String.valueOf(modelo.buscar(numeroDeCuenta).getFechaDeApertura()));
             vista.id.setText(String.valueOf(modelo.buscar(numeroDeCuenta).getDatosPersona().getId()));
             vista.nombre.setText(modelo.buscar(numeroDeCuenta).getDatosPersona().getNombre());
             vista.apellido.setText(modelo.buscar(numeroDeCuenta).getDatosPersona().getApellido());
-            vista.correo.setText(modelo.buscar(numeroDeCuenta).getDatosPersona().getApellido());
+            vista.correo.setText(modelo.buscar(numeroDeCuenta).getDatosPersona().getCorreo());
         }
         if(e.getSource().equals(vista.buscarUsuario)){
             int id = Integer.valueOf(vista.id.getText());
