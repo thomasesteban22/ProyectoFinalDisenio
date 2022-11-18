@@ -16,7 +16,7 @@ public class UIMovimientos extends JFrame{
         setContentPane(vistaMovimientos);
         setTitle("Vista Movimientos");
         setSize(450, 450);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
     }
 }

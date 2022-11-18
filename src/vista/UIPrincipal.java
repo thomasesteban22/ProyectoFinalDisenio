@@ -13,7 +13,7 @@ public class UIPrincipal extends JFrame{
         setContentPane(vistaPrincipal);
         setTitle("Vista persona");
         setSize(600, 600);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
     }
 }

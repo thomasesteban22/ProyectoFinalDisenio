@@ -15,7 +15,7 @@ public class UIPersona extends JFrame {
         setContentPane(vistaPersona);
         setTitle("Vista persona");
         setSize(450, 450);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
     }
 }
