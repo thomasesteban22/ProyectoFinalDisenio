@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalTime;
+
 
 public class ControladorCuentas implements ActionListener{
     private UICuentas vista;
@@ -53,14 +53,13 @@ public class ControladorCuentas implements ActionListener{
 
             vista.numeroDeCuenta.setText(String.valueOf(idRand));
             vista.fechaDeApertura.setText(String.valueOf(fechaDeApertura));
-            JOptionPane.showInternalMessageDialog(null,"lA CUENTA DE AHORROS FUE CREADA");
+
             vista.numeroDeCuenta.setText("");
             vista.fechaDeApertura.setText("");
             vista.id.setText("");
             vista.nombre.setText("");
             vista.apellido.setText("");
             vista.correo.setText("");
-
 
         }
 
@@ -86,7 +85,7 @@ public class ControladorCuentas implements ActionListener{
 
             vista.numeroDeCuenta.setText(String.valueOf(idRand));
             vista.fechaDeApertura.setText(String.valueOf(fechaHoy));
-            JOptionPane.showInternalMessageDialog(null,"lA CUENTA DE AHORROS FUE CREADA");
+
             vista.numeroDeCuenta.setText("");
             vista.fechaDeApertura.setText("");
             vista.id.setText("");
@@ -118,7 +117,7 @@ public class ControladorCuentas implements ActionListener{
 
             vista.numeroDeCuenta.setText(String.valueOf(idRand));
             vista.fechaDeApertura.setText(String.valueOf(fechaHoy));
-            JOptionPane.showInternalMessageDialog(null,"lA CUENTA DE AHORROS FUE CREADA");
+
             vista.numeroDeCuenta.setText("");
             vista.fechaDeApertura.setText("");
             vista.id.setText("");
