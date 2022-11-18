@@ -53,7 +53,7 @@ public class ControladorCuentas implements ActionListener{
 
             vista.numeroDeCuenta.setText(String.valueOf(idRand));
             vista.fechaDeApertura.setText(String.valueOf(fechaDeApertura));
-
+            JOptionPane.showInternalMessageDialog(null,"SU CUENTA FUE CREADA");
             vista.numeroDeCuenta.setText("");
             vista.fechaDeApertura.setText("");
             vista.id.setText("");
@@ -85,7 +85,7 @@ public class ControladorCuentas implements ActionListener{
 
             vista.numeroDeCuenta.setText(String.valueOf(idRand));
             vista.fechaDeApertura.setText(String.valueOf(fechaHoy));
-
+            JOptionPane.showInternalMessageDialog(null,"SU CUENTA FUE CREADA");
             vista.numeroDeCuenta.setText("");
             vista.fechaDeApertura.setText("");
             vista.id.setText("");
@@ -117,7 +117,7 @@ public class ControladorCuentas implements ActionListener{
 
             vista.numeroDeCuenta.setText(String.valueOf(idRand));
             vista.fechaDeApertura.setText(String.valueOf(fechaHoy));
-
+            JOptionPane.showInternalMessageDialog(null,"SU CUENTA FUE CREADA");
             vista.numeroDeCuenta.setText("");
             vista.fechaDeApertura.setText("");
             vista.id.setText("");

@@ -7,6 +7,7 @@ import data.*;
 import vista.UICuentas;
 import vista.UIMovimientos;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -91,7 +92,7 @@ public class ControladorMovimientos implements ActionListener{
                         }
                         break;
                     default:
-                        System.out.println("No se econtró cuenta");
+                        JOptionPane.showInternalMessageDialog(null,"ESTA CUENTA NO EXISTE");
                         break;
                 }
             }
