@@ -2,6 +2,8 @@ package controladores;
 import dao.PersonasDAO;
 import data.Persona;
 import vista.*;
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -37,6 +39,7 @@ public class ControladorPersona implements ActionListener {
             vista.nombre.setText("");
             vista.apellido.setText("");
             vista.correo.setText("");
+            JOptionPane.showInternalMessageDialog(null,"El Usuario a sido creado");
         }
         if (e.getSource().equals(vista.buscar)){
             int id = Integer.valueOf(vista.id.getText());
