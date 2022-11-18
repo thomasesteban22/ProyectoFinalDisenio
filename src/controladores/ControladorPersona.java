@@ -35,11 +35,12 @@ public class ControladorPersona implements ActionListener {
             persona.setApellido(apellido);
             persona.setCorreo(correo);
             modelo.adicionar(persona);
+            JOptionPane.showInternalMessageDialog(null,"El Usuario a sido creado");
             vista.id.setText("");
             vista.nombre.setText("");
             vista.apellido.setText("");
             vista.correo.setText("");
-            JOptionPane.showInternalMessageDialog(null,"El Usuario a sido creado");
+
         }
         if (e.getSource().equals(vista.buscar)){
             int id = Integer.valueOf(vista.id.getText());
