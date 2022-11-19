@@ -1,10 +1,7 @@
 package controladores;
 
 import dao.PersonasDAO;
-import vista.UICuentas;
-import vista.UIMovimientos;
-import vista.UIPersona;
-import vista.UIPrincipal;
+import vista.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -39,6 +36,12 @@ public class ControladorPrincipal implements ActionListener {
         }if(e.getSource().equals(vista.depositosYRetiros)){
             try {
                 ControladorMovimientos controladorMovimientos = new ControladorMovimientos(new UIMovimientos());
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        }if(e.getSource().equals(vista.informe)){
+            try {
+                ControladorInformes controladorInformes = new ControladorInformes(new UIInformes());
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }

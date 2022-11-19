@@ -91,4 +91,7 @@ public class CuentasDAO {
         }
         return null;
     }
+    public List<Cuenta> todos(){
+        return listaCuentas;
+    }
 }
