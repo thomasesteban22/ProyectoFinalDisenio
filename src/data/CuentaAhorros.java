@@ -40,6 +40,7 @@ public class CuentaAhorros extends Cuenta implements IRetirar, IDepositar{
             return (int) saldo;
         }else if(saldo <= valorRetiro){
             JOptionPane.showInternalMessageDialog(null,"NO SE PUEDE PROCESAR EL RETIRO, SALDO INSUFICIENTE");
+            return (int) saldo;
         }
     return 0;
     }
