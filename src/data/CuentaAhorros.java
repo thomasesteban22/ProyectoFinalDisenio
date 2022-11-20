@@ -37,6 +37,7 @@ public class CuentaAhorros extends Cuenta implements IRetirar, IDepositar{
     public int retirar(int valorRetiro) {
         if (saldo > valorRetiro) {
             saldo = saldo - valorRetiro;
+            JOptionPane.showInternalMessageDialog(null,"RETIRO EXITOSO");
             return (int) saldo;
         }else if(saldo <= valorRetiro){
             JOptionPane.showInternalMessageDialog(null,"NO SE PUEDE PROCESAR EL RETIRO, SALDO INSUFICIENTE");
