@@ -3,10 +3,7 @@ import controladores.ControladorCuentas;
 import controladores.ControladorMovimientos;
 import controladores.ControladorPersona;
 import controladores.ControladorPrincipal;
-import dao.PersonasDAO;
-import vista.UICuentas;
-import vista.UIMovimientos;
-import vista.UIPersona;
+
 import vista.UIPrincipal;
 
 import java.io.IOException;

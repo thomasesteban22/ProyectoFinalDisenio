@@ -48,7 +48,7 @@ public class ControladorMovimientos implements ActionListener{
                         if (cuenta.getNumeroDeCuenta() == numeroDeCuenta){
                             modelo.buscar(numeroDeCuenta).setSaldo(modeloCuentaAhorros.depositar(cantidad));
                             vista.saldo.setText(String.valueOf(modeloCuentaAhorros.getSaldo()));
-                            JOptionPane.showInternalMessageDialog(null,"SU RETIRO FUE EXITOSO");
+                            JOptionPane.showInternalMessageDialog(null,"SU DEPOSITO FUE EXITOSO");
                             modelo.guardar();
                         }
                         break;
@@ -56,7 +56,7 @@ public class ControladorMovimientos implements ActionListener{
                         if (cuenta.getNumeroDeCuenta() == numeroDeCuenta){
                             modelo.buscar(numeroDeCuenta).setSaldo(modeloCuentaCorriente.depositar(cantidad));
                             vista.saldo.setText(String.valueOf(modeloCuentaCorriente.getSaldo()));
-                            JOptionPane.showInternalMessageDialog(null,"SU RETIRO FUE EXITOSO");
+                            JOptionPane.showInternalMessageDialog(null,"SU DEPOSITO FUE EXITOSO");
                             modelo.guardar();
                         }
                         break;
@@ -64,7 +64,7 @@ public class ControladorMovimientos implements ActionListener{
                         if (cuenta.getNumeroDeCuenta() == numeroDeCuenta){
                             modelo.buscar(numeroDeCuenta).setSaldo(modeloCuentaVivienda.depositar(cantidad));
                             vista.saldo.setText(String.valueOf(modeloCuentaVivienda.getSaldo()));
-                            JOptionPane.showInternalMessageDialog(null,"SU RETIRO FUE EXITOSO");
+                            JOptionPane.showInternalMessageDialog(null,"SU DEPOSITO FUE EXITOSO");
                             modelo.guardar();
                         }
                         break;
