@@ -1,5 +1,7 @@
 package data;
 
+import javax.swing.*;
+
 public class CuentaAhorros extends Cuenta implements IRetirar, IDepositar{
     private long interesAcomulado;
 
@@ -36,8 +38,8 @@ public class CuentaAhorros extends Cuenta implements IRetirar, IDepositar{
         if (saldo > valorRetiro) {
             saldo = saldo - valorRetiro;
             return (int) saldo;
-        }else if(saldo < valorRetiro){
-            System.out.println("Saldo insuficiente");
+        }else if(saldo <= valorRetiro){
+            JOptionPane.showInternalMessageDialog(null,"NO SE PUEDE PROCESAR EL RETIRO, SALDO INSUFICIENTE");
         }
     return 0;
     }

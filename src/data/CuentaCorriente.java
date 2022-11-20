@@ -1,5 +1,6 @@
 package data;
 
+import javax.swing.*;
 import java.time.LocalDate;
 
 public class CuentaCorriente extends Cuenta implements IDepositar, IRetirar{
@@ -43,8 +44,8 @@ public class CuentaCorriente extends Cuenta implements IDepositar, IRetirar{
         if (saldo > valorRetiro) {
             saldo = saldo - valorRetiro;
             return (int) saldo;
-        }else if(saldo < valorRetiro){
-            System.out.println("Saldo insuficiente");
+        }else if(saldo <= valorRetiro){
+            JOptionPane.showInternalMessageDialog(null,"NO SE PUEDE PROCESAR EL RETIRO, SALDO INSUFICIENTE");
         }
         return 0;
     }
